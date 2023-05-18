@@ -2,33 +2,37 @@
 
 {% block todo %}
 	<header>
-		<h1>todo app</h1>
+	<a class="team_logo" href="{{path('app_home')}}"><h1>Symfony team project</h1></a>
+		{# <h1>Symfony team project</h1> #}
 		<nav>
 			<ul>
-				<a href="{{path('app_home')}}">Home</a>
-				<a href="{{path('app_crud_list')}}">Todo</a>
-				<a href="{{path('app_about')}}">About</a>
+				<a class="navigation" href="{{path('app_home')}}">Home</a>
+				<a class="navigation" href="{{path('app_crud_list')}}">Todo</a>
+				<a class="navigation" href="{{path('app_about')}}">About</a>
 			</ul>
 		</nav>
 	</header>
-	<div class="header">
-		<form action="{{path('create_task')}}" method="post">
-			<input name="title" type="text" id="myInput" placeholder="Task title..."/>
-			<button type="submit" class="addBtn">Create task</button>
-		</form>
-	</div>
+	<div class="todo_main" ><div>
+	<div class="todo_output">
+		<div class="header">
+			<form action="{{path('create_task')}}" method="post">
+				<input name="title" type="text" id="myInput" placeholder="Task title..."/>
+				<button type="submit" class="addBtn">Create task</button>
+			</form>
+		</div>
 
-	<ul>
-		{% for task in tasks %}
-			<li {% if task.status %} class="checked" {% endif %}>
-				<a href="{{path('update_task', {'id': task.id})}}">
-					<span class="task-list-item">{{task.title}}
-					</span>
-				</a>
-				<a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id': task.id})}}">
-					<span class="close">X</span>
-				</a>
-			</li>
-		{% endfor %}
-	</ul>
+		<ul>
+			{% for task in tasks %}
+				<li {% if task.status %} class="checked" {% endif %}>
+					<a href="{{path('update_task', {'id': task.id})}}">
+						<span class="task-list-item">{{task.title}}
+						</span>
+					</a>
+					<a onclick="return confirm('Are you sure to delete?')" href="{{path('delete_task', {'id': task.id})}}">
+						<span class="close">X</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 {% endblock %}
