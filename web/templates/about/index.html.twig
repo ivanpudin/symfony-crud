@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block about %}
+	<header>
+		<h1>todo app</h1>
+		<nav>
+			<ul>
+				<a href="{{path('app_home')}}">Home</a>
+				<a href="{{path('app_crud_list')}}">Todo</a>
+				<a href="{{path('app_about')}}">About</a>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Our team</h2>
+		<ul>
+			<li>Ivan Pudin</li>
+			<li>Pavel Kliukin</li>
+			<li>Shaho Mostafa Soltani</li>
+		</ul>
+	</main>
+{% endblock %}
