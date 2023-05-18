@@ -2,18 +2,21 @@
 
 {% block main %}
 	<header>
-		<h1>todo app</h1>
+		<h1>Symfony team project</h1>
 		<nav>
 			<ul>
-				<a href="{{path('app_home')}}">Home</a>
-				<a href="{{path('app_crud_list')}}">Todo</a>
-				<a href="{{path('app_about')}}">About</a>
+				<a class="navigation" href="{{path('app_home')}}">Home</a>
+				<a class="navigation" href="{{path('app_crud_list')}}">Todo</a>
+				<a class="navigation" href="{{path('app_about')}}">About</a>
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<p>Todo Manager is your ultimate task organization tool that empowers you to take charge of your daily responsibilities and supercharge your productivity. With our intuitive interface and powerful features, you can effortlessly manage your tasks, prioritize your to-dos, and stay on top of your commitments.</p>
-		<p>Experience the joy of organized living as you create, track, and complete tasks with ease. Whether you're juggling personal errands, work projects, or academic assignments, Todo Manager is here to streamline your workflow and ensure nothing falls through the cracks.</p>
-		<p>Stay focused and motivated as you plan your day, set deadlines, and mark off completed tasks. With customizable categories, tags, and labels, you can tailor Todo Manager to match your unique organizational style. Effortlessly collaborate with colleagues, friends, or family members by sharing task lists and assigning responsibilities.</p>
-	</main>
+	<main class="home">
+    <video autoplay loop muted>
+        <source src="/assets/homebackground.mp4" type="video/mp4">
+    </video>
+    <div class="logo-container">
+        <img class="symfonylogo" src="/assets/symfony.png" alt="Symfony logo">
+    </div>
+</main>
 {% endblock %}

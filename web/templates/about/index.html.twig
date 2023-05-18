@@ -2,21 +2,25 @@
 
 {% block about %}
 	<header>
-		<h1>todo app</h1>
+		<a class="team_logo" href="{{path('app_home')}}"><h1>Symfony team project</h1></a>
 		<nav>
 			<ul>
-				<a href="{{path('app_home')}}">Home</a>
-				<a href="{{path('app_crud_list')}}">Todo</a>
-				<a href="{{path('app_about')}}">About</a>
+				<a class="navigation" href="{{path('app_home')}}">Home</a>
+				<a class="navigation" href="{{path('app_crud_list')}}">Todo</a>
+				<a class="navigation" href="{{path('app_about')}}">About</a>
 			</ul>
 		</nav>
 	</header>
-	<main>
-		<h2>Our team</h2>
-		<ul>
-			<li>Ivan Pudin</li>
-			<li>Pavel Kliukin</li>
-			<li>Shaho Mostafa Soltani</li>
-		</ul>
+	<main class="team_main">
+	<div class="team_output">
+		<div class="team_box">
+			<div class="team_title"><h2>Our team</h2></div>
+			<ul>
+				<li>1. Ivan Pudin</li>
+				<li>2. Pavel Kliukin</li>
+				<li>3. Shaho Mostafa Soltani</li>
+			</ul>
+		</div>
+	</div>
 	</main>
 {% endblock %}
