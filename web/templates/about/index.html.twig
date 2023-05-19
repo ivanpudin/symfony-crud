@@ -2,7 +2,9 @@
 
 {% block about %}
 	<header>
-		<a class="team_logo" href="{{path('app_home')}}"><h1>Symfony team project</h1></a>
+		<a class="team_logo" href="{{path('app_home')}}">
+			<h1>Symfony team project</h1>
+		</a>
 		<nav>
 			<ul>
 				<a class="navigation" href="{{path('app_home')}}">Home</a>
@@ -12,15 +14,17 @@
 		</nav>
 	</header>
 	<main class="team_main">
-	<div class="team_output">
-		<div class="team_box">
-			<div class="team_title"><h2>Our team</h2></div>
-			<ul>
-				<li>1. Ivan Pudin</li>
-				<li>2. Pavel Kliukin</li>
-				<li>3. Shaho Mostafa Soltani</li>
-			</ul>
+		<div class="team_output">
+			<div class="team_box">
+				<div class="team_title">
+					<h2>Our team</h2>
+				</div>
+				<ul>
+					<li><a href="https://github.com/ivanpudin" target="_blank">Ivan Pudin</a></li>
+					<li><a href="https://github.com/Pavel-Kliukin" target="_blank">Pavel Kliukin</a></li>
+					<li><a href="https://github.com/SSOL7" target="_blank">Shaho Mostafa Soltani</a></li>
+				</ul>
+			</div>
 		</div>
-	</div>
 	</main>
 {% endblock %}

@@ -10,11 +10,12 @@ body {
 
 header {
   background-color: #333;
-  width: 100%;
-  height: 10vh;
+  width: 100vw;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: white;
+  padding: 2rem;
 }
 
 .team_logo {
@@ -26,14 +27,11 @@ header h1 {
   margin-left: 1rem;
 }
 
-header nav {
-  margin-left: 25rem;
-}
-
 header .navigation {
   color: white;
   font-size: 1.3rem;
   margin: 0 2rem;
+  text-decoration: none;
 }
 
 .home {
@@ -183,15 +181,15 @@ input {
 .addBtn {
   padding: 8px;
   width: 25%;
-  background: #bbb;
-  color: #1e4363;
+  background-color: #333;
+  color: white;
   float: left;
   text-align: center;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
-  border-radius: 0;
   font-weight: bold;
+  border: none;
 }
 
 .addBtn:hover {
@@ -227,4 +225,9 @@ input {
 
 .team_title h2, li {
   color: white;
+}
+
+.team_main li a {
+  color: white;
+  text-decoration: none;
 }
