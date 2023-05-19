@@ -1,6 +1,6 @@
 # Getting started
 
-This app already includes [symfony-mamp](https://github.com/ivanpudin/symfony-crud)
+This app already includes [symfony-mamp](https://github.com/kalwar/Symfony-MAMP)
 
 perform commands step by step
 
