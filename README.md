@@ -1,5 +1,7 @@
 # Getting started
 
+This app already includes [symfony-mamp](https://github.com/ivanpudin/symfony-crud)
+
 perform commands step by step
 
 clone this repository
@@ -39,4 +41,5 @@ choose 'yes', when asked
 after that, you are done
 
 app can be accessed at localhost:8007
+
 database can be accessed at localhost:9082
