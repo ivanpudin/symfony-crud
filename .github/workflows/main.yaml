@@ -14,18 +14,21 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up PHP
+      working-directory: ./web
       uses: shivammathur/setup-php@v2
       with:
         php-version: '7.4'
 
     - name: Install Composer Dependencies
-      run: cd web
+      working-directory: ./web
       run: composer install
 
     - name: Set up Symfony Environment
+      working-directory: ./web
       run: php bin/console --no-interaction doctrine:database:create --env=test
           
     - name: Run PHPUnit Tests
+      working-directory: ./web
       run: php bin/phpunit
 
   # deploy:
