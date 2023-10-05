@@ -1,4 +1,4 @@
-name: Symfony CI/CD
+name: PHP CI/CD
 
 on:
   push:
@@ -25,10 +25,6 @@ jobs:
     - name: Install Composer Dependencies
       working-directory: ./web
       run: composer install
-
-    - name: Set up Symfony Environment
-      working-directory: ./web
-      run: php bin/console --no-interaction doctrine:database:create --env=test
           
     - name: Run PHPUnit Tests
       working-directory: ./web
