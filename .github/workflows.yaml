@@ -1,0 +1,43 @@
+name: Symfony CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+
+    - name: Install Composer Dependencies
+      run: composer install
+
+    - name: Set up Symfony Environment
+      run: php bin/console --no-interaction doctrine:database:create --env=test
+          
+    - name: Run PHPUnit Tests
+      run: php bin/phpunit
+
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: test
+
+  #   steps:
+  #   - name: Upload to Server via SCP
+  #     uses: appleboy/scp-action@v0.3.0
+  #     with:
+  #       host: ${{ secrets.SSH_HOST }}
+  #       username: ${{ secrets.SSH_USERNAME }}
+  #       key: ${{ secrets.SSH_PRIVATE_KEY }}
+  #       port: ${{ secrets.SSH_PORT }}
+  #       source: './*'
+  #       target: '/path/to/your/server/directory'
