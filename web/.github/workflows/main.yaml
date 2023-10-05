@@ -19,6 +19,7 @@ jobs:
         php-version: '7.4'
 
     - name: Install Composer Dependencies
+      run: cd web
       run: composer install
 
     - name: Set up Symfony Environment
